@@ -71,14 +71,14 @@ fun SearchBottomSheet(
 
                 SearchTextField(
                     modifier = Modifier
-                        .height(48.dp)
+                        .height(50.dp)
                         .weight(1f)
                 )
 
                 CustomButton(
                     modifier = Modifier
-                        .height(40.dp)
-                        .width(40.dp),
+                        .height(48.dp)
+                        .width(48.dp),
                     isSelected = true,
                     background = LocalCustomColors.current.secondaryButton,
                     onClick = {
@@ -164,8 +164,8 @@ fun SearchBottomSheet(
                 )
             }
 
-            //RecentSearches()
-            ResultSearch()
+            RecentSearches()
+            //ResultSearch()
 
 
         }

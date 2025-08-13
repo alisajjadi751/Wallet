@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -38,7 +39,8 @@ fun RecentSearches(modifier: Modifier = Modifier) {
 
     Column(
         modifier = modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .height(250.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -167,4 +169,15 @@ fun RecentSearchItem(
             modifier = Modifier.fillMaxWidth(0.6f)
         )
     }
+}
+
+@Composable
+fun EmptyRecentSearch(modifier: Modifier = Modifier) {
+
+        Text(
+            text = "Search History Is Empty !",
+            style = MaterialTheme.typography.body4.copy(color = LocalCustomColors.current.primaryText)
+        )
+
+
 }

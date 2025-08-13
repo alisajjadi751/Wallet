@@ -40,7 +40,7 @@ fun SearchTextField(
         onValueChange = onValueChange,
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
+            .clip(RoundedCornerShape(20.dp))
             .background(LocalCustomColors.current.textFieldSearch),
         singleLine = true,
         cursorBrush = SolidColor(LocalCustomColors.current.cursor),

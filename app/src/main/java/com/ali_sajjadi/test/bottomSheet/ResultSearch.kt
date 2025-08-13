@@ -2,15 +2,9 @@ package com.ali_sajjadi.test.bottomSheet
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -102,33 +96,17 @@ fun FindResult(
             style = MaterialTheme.typography.body4.copy(color = LocalCustomColors.current.primaryText)
         )
         CustomButton(
-            modifier = Modifier
-                .height(30.dp)
-                .width(70.dp),
+            modifier = modifier
+                .size(width = 70.dp, height = 30.dp),
+            radius = 10.dp,
             onClick = {}
         ) {
             Text(
-                text = "Watch",
+                text = "watch",
                 style = MaterialTheme.typography.body3.copy(color = LocalCustomColors.current.primaryText)
             )
 
         }
-
-        Button(
-            onClick = {},
-            modifier = Modifier
-                .size(width = 70.dp, height = 30.dp),
-            shape = RoundedCornerShape(15.dp),
-            contentPadding = PaddingValues(0.dp) // متن وسط دکمه بمونه
-        ) {
-            Text(
-                text = "Watch",
-                style = MaterialTheme.typography.body3.copy(color = LocalCustomColors.current.primaryText)
-
-
-            )
-        }
-
     }
 
 
