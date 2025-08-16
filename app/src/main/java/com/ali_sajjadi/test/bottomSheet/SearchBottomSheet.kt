@@ -21,7 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.ali_sajjadi.test.R
-import com.ali_sajjadi.test.SearchTextField
+import com.ali_sajjadi.test.CustomTextField
 import com.ali_sajjadi.test.component.CustomButton
 import com.ali_sajjadi.test.ui.theme.LocalCustomColors
 import com.ali_sajjadi.test.ui.theme.body3
@@ -34,12 +34,8 @@ fun SearchBottomSheet(
     onDismiss: () -> Unit = {},
 ) {
 
-    val sheetState = rememberModalBottomSheetState(
-        skipPartiallyExpanded = true
-    )
+    val sheetState = rememberModalBottomSheetState()
 
-
-    /*val sheetState = rememberModalBottomSheetState()*/
 
     ModalBottomSheet(
         sheetState = sheetState,
@@ -69,7 +65,7 @@ fun SearchBottomSheet(
                 verticalAlignment = Alignment.CenterVertically
             ) {
 
-                SearchTextField(
+                CustomTextField(
                     modifier = Modifier
                         .height(50.dp)
                         .weight(1f)
@@ -79,7 +75,7 @@ fun SearchBottomSheet(
                     modifier = Modifier
                         .height(48.dp)
                         .width(48.dp),
-                    isSelected = true,
+                    secondaryButton = true,
                     background = LocalCustomColors.current.secondaryButton,
                     onClick = {
                         /*TODO()*/
@@ -105,7 +101,7 @@ fun SearchBottomSheet(
                     modifier = Modifier
                         .height(40.dp)
                         .weight(1f),
-                    isSelected = true,
+                    secondaryButton = true,
                     background = LocalCustomColors.current.secondaryButton,
                     strokeColor = LocalCustomColors.current.outlinedButton,
                     strokeWidth = 1.dp,
@@ -136,7 +132,7 @@ fun SearchBottomSheet(
                     modifier = Modifier
                         .height(40.dp)
                         .weight(1f),
-                    isSelected = true,
+                    secondaryButton = true,
                     background = LocalCustomColors.current.secondaryButton,
                     strokeColor = LocalCustomColors.current.outlinedButton,
                     strokeWidth = 1.dp,

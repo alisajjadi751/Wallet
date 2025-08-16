@@ -2,13 +2,15 @@ package com.ali_sajjadi.test.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -21,7 +23,7 @@ import com.ali_sajjadi.test.ui.theme.LocalCustomColors
 fun CustomButton(
     modifier: Modifier = Modifier,
     radius: Dp = 16.dp,
-    isSelected: Boolean = false,
+    secondaryButton: Boolean = false,
     backgroundBrush: Brush = LocalCustomColors.current.primaryButton,
     background: Color = Color.Transparent,
     strokeColor: Color = LocalCustomColors.current.outlinedButtonBrand,
@@ -29,6 +31,9 @@ fun CustomButton(
     onClick: () -> Unit,
     content: @Composable () -> Unit
 ) {
+    val interactionSource = remember { MutableInteractionSource() }
+    val isHovered = interactionSource.collectIsPressedAsState().value
+
 
     Button(
         modifier = modifier,
@@ -38,7 +43,7 @@ fun CustomButton(
         onClick = onClick,
     ) {
         Box(
-            modifier = if (isSelected) {
+            modifier = if (secondaryButton) {
                 modifier
                     .background(
                         color = background,

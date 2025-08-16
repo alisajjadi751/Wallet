@@ -1,7 +1,6 @@
 package com.ali_sajjadi.test
 
 import ParticleScreen
-import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -32,12 +31,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ali_sajjadi.test.component.CustomButton
 import com.ali_sajjadi.test.ui.theme.LocalCustomColors
-import com.ali_sajjadi.test.ui.theme.TestTheme
 import com.ali_sajjadi.test.ui.theme.TextFieldSearch2Dark
 import com.ali_sajjadi.test.ui.theme.h1
 import com.ali_sajjadi.test.ui.theme.h7
@@ -162,7 +159,7 @@ fun RegisterScreen(modifier: Modifier = Modifier) {
                 }
 
                 CustomButton(modifier = modifier.fillMaxWidth().height(40.dp),
-                    isSelected = true, strokeColor = LocalCustomColors.current.outlinedButtonBrand,
+                    secondaryButton = true, strokeColor = LocalCustomColors.current.outlinedButtonBrand,
                     radius = 16.dp, onClick = {} ) {
 
                     Row(modifier = modifier.fillMaxSize(),

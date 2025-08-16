@@ -143,6 +143,8 @@ fun RecentSearchItem(
                             onCopyClick()
                         }
                 )
+
+
             }
             Row(
                 modifier = Modifier

@@ -29,8 +29,10 @@ import com.ali_sajjadi.test.ui.theme.body4
 
 @Preview(showBackground = true)
 @Composable
-fun SearchTextField(
+fun CustomTextField(
     modifier: Modifier = Modifier,
+    background: Color =LocalCustomColors.current.textFieldSearch,
+    hint: String = "wallet address",
     value: String = "",
     onValueChange: (String) -> Unit = {},
     onClickClear: () -> Unit = {}
@@ -41,7 +43,7 @@ fun SearchTextField(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(LocalCustomColors.current.textFieldSearch),
+            .background(background),
         singleLine = true,
         cursorBrush = SolidColor(LocalCustomColors.current.cursor),
         textStyle = MaterialTheme.typography.body4.copy(
@@ -49,7 +51,7 @@ fun SearchTextField(
         ),
         decorationBox = { innerTextField ->
             Row(
-                modifier = Modifier
+                modifier = modifier
                     .height(40.dp)
                     .fillMaxWidth()
                     .padding(horizontal = 10.dp),
@@ -60,7 +62,7 @@ fun SearchTextField(
                 Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
                     if (value.isEmpty()) {
                         Text(
-                            text = "wallet address",
+                            text = hint,
                             style = MaterialTheme.typography.body3.copy(
                                 color = LocalCustomColors.current.hintTextFieldSearch
                             )
@@ -68,7 +70,7 @@ fun SearchTextField(
                     }
                     innerTextField()
                 }
-
+                if (value.isNotBlank())
                 Icon(
                     painter = painterResource(R.drawable.ic_clear),
                     contentDescription = "clear",
