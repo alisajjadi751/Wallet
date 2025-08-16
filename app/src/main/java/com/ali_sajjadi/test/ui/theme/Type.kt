@@ -8,11 +8,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.ali_sajjadi.test.R
-
 val InterFontFamily = FontFamily(
-    Font(R.font.inter_regular, FontWeight.Normal),
-    Font(R.font.inter_medium, FontWeight.Medium),
-    Font(R.font.inter_bold, FontWeight.Bold)
+    Font(R.font.inter)
 )
 
 
@@ -104,7 +101,7 @@ val Typography = Typography(
 )
 
 val font = FontFamily(
-    Font(R.font.inter_medium)
+    Font(R.font.inter)
 )
 val Typography.body1: TextStyle
     @Composable

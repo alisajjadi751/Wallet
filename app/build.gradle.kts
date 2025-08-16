@@ -61,4 +61,7 @@ dependencies {
         artifact { type = "sources" }
     }
     implementation("androidx.compose.ui:ui:1.8.3")
+    //coil
+    implementation("io.coil-kt.coil3:coil-compose:3.2.0")
+
 }
