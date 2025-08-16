@@ -124,7 +124,7 @@ fun RegisterScreen(modifier: Modifier = Modifier) {
                     icon = R.drawable.ic_open_eyse,
                     iconChangeState = R.drawable.ic_close_eyse,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                    onValueChange = { password = it }
+                    onValueChange = { confirmPassword = it }
                 )
 
             }
