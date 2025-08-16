@@ -180,7 +180,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
                     numbers[i] = value
                 }
 
-                var timeLeft by remember { mutableStateOf(20) }
+                var timeLeft by remember { mutableStateOf(60) }
                 CountdownTimer(timeLeft, { timeLeft = it }, {
                     isEnableResendCode = true
                 })
@@ -210,7 +210,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
                         ))
 
                     Text(modifier = modifier.clickable(isEnableResendCode)
-                    { timeLeft = 20
+                    { timeLeft = 60
                       isEnableResendCode = false },
                         text = "Resend Code", color = LocalCustomColors.current.primaryLine,
                         style = MaterialTheme.typography.h8.copy(
