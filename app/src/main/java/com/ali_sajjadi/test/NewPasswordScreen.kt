@@ -40,13 +40,13 @@ import com.ali_sajjadi.test.ui.theme.h1
 import com.ali_sajjadi.test.ui.theme.h7
 import com.ali_sajjadi.test.ui.theme.h9
 
-@Composable
-@Preview("LoginScreen", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
-fun LoginScreenPreview() {
-    TestTheme {
-        NewPasswordScreen()
-    }
-}
+//@Composable
+//@Preview("LoginScreen", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+//fun LoginScreenPreview() {
+//    TestTheme {
+//        NewPasswordScreen()
+//    }
+//}
 
 @Composable
 fun NewPasswordScreen(modifier: Modifier = Modifier) {
