@@ -85,6 +85,10 @@ val PrimaryLineDark = Color(0xFF9DA0AF)
 val SecondaryLineLight = Color(0xFF9DA0AF)
 val SecondaryLineDark = Color(0xFF2A2D3B)
 
+<<<<<<< HEAD
 val AlertDialogLight = Color(0xFFFFFFFF)
 val AlertDialogDark = Color(0xFF242424)
+=======
+val blueAddress = Color(0xFF6BA2F3)
+>>>>>>> 37741159fac793c284ce5ceefbf4711ac9afac8e
 

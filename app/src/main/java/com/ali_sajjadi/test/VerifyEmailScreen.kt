@@ -95,7 +95,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
 //        GalaxyBackgroundFullScreen()
 
         Column(
-            modifier = modifier
+            modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)
                 .background(color = Color.Transparent),
@@ -104,7 +104,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
         ) {
 
             Surface(
-                modifier = modifier
+                modifier = Modifier
                     .size(30.dp, 30.dp)
                     .clickable(
                         true,
@@ -127,7 +127,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
             }
 
             Text(
-                modifier = modifier.padding(top = 16.dp),
+                modifier = Modifier.padding(top = 16.dp),
                 text = "Verify Email", color = LocalCustomColors.current.primaryText,
                 style = MaterialTheme.typography.h1.copy(
                     fontSize = 32.sp,
@@ -136,7 +136,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
             )
 
             Text(
-                modifier = modifier.padding(top = 22.dp),
+                modifier = Modifier.padding(top = 22.dp),
                 text = "Verify your email below to proceed",
                 color = LocalCustomColors.current.primaryText,
                 style = MaterialTheme.typography.h9.copy(
@@ -146,7 +146,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
             )
 
             Text(
-                modifier = modifier.padding(top = 84.dp),
+                modifier = Modifier.padding(top = 84.dp),
                 textAlign = TextAlign.Center,
                 text = buildAnnotatedString {
                     withStyle(style = SpanStyle(color = LocalCustomColors.current.primaryText)) {
@@ -209,7 +209,7 @@ fun VerifyEmailScreen(modifier: Modifier = Modifier, email: String) {
                             fontWeight = FontWeight.Medium
                         ))
 
-                    Text(modifier = modifier.clickable(isEnableResendCode)
+                    Text(modifier = Modifier.clickable(isEnableResendCode)
                     { timeLeft = 60
                       isEnableResendCode = false },
                         text = "Resend Code", color = LocalCustomColors.current.primaryLine,
