@@ -227,8 +227,6 @@ fun WalletInfoScreen(
             onDismiss = { showInfoSheet = false }
         )
     }
-
-
 }
 
 @Composable

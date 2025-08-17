@@ -27,7 +27,7 @@ import com.ali_sajjadi.test.ui.theme.LocalCustomColors
 import com.ali_sajjadi.test.ui.theme.body3
 import com.ali_sajjadi.test.ui.theme.body4
 
-@Preview(showBackground = true)
+
 @Composable
 fun CustomTextField(
     modifier: Modifier = Modifier,
@@ -35,7 +35,8 @@ fun CustomTextField(
     hint: String = "wallet address",
     value: String = "",
     onValueChange: (String) -> Unit = {},
-    onClickClear: () -> Unit = {}
+    onClickClear: () -> Unit = {},
+    content: @Composable () -> Unit = {}
 ) {
     BasicTextField(
         value = value,
@@ -50,8 +51,9 @@ fun CustomTextField(
             color = LocalCustomColors.current.primaryText
         ),
         decorationBox = { innerTextField ->
+
             Row(
-                modifier = modifier
+                modifier = Modifier
                     .height(40.dp)
                     .fillMaxWidth()
                     .padding(horizontal = 10.dp),
@@ -60,6 +62,9 @@ fun CustomTextField(
             ) {
 
                 Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
+
+                    innerTextField()
+
                     if (value.isEmpty()) {
                         Text(
                             text = hint,
@@ -68,19 +73,60 @@ fun CustomTextField(
                             )
                         )
                     }
-                    innerTextField()
                 }
-                if (value.isNotBlank())
-                Icon(
-                    painter = painterResource(R.drawable.ic_clear),
-                    contentDescription = "clear",
-                    modifier = Modifier
-                        .size(15.dp)
-                        .clickable { onClickClear() },
-                    tint = Color.Unspecified
-                )
+
+                // محتوای اختیاری (مثل باتن Paste) همیشه بعد از TextField
+                content()
+
+                // clear icon فقط وقتی متن وجود داره
+                if (value.isNotBlank()) {
+                    Icon(
+                        painter = painterResource(R.drawable.ic_clear),
+                        contentDescription = "clear",
+                        modifier = Modifier
+                            .size(15.dp)
+                            .clickable { onClickClear() },
+                        tint = Color.Unspecified
+                    )
+                }
             }
         }
+
+        /* decorationBox = { innerTextField ->
+
+             Row(
+                 modifier = modifier
+                     .height(40.dp)
+                     .fillMaxWidth()
+                     .padding(horizontal = 10.dp),
+                 verticalAlignment = Alignment.CenterVertically,
+                 horizontalArrangement = Arrangement.SpaceBetween
+             ) {
+
+                 Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
+
+                     content()
+                     if (value.isEmpty()) {
+                         Text(
+                             text = hint,
+                             style = MaterialTheme.typography.body3.copy(
+                                 color = LocalCustomColors.current.hintTextFieldSearch
+                             )
+                         )
+                     }
+                     innerTextField()
+                 }
+                 if (value.isNotBlank())
+                 Icon(
+                     painter = painterResource(R.drawable.ic_clear),
+                     contentDescription = "clear",
+                     modifier = Modifier
+                         .size(15.dp)
+                         .clickable { onClickClear() },
+                     tint = Color.Unspecified
+                 )
+             }
+         }*/
     )
 }
 

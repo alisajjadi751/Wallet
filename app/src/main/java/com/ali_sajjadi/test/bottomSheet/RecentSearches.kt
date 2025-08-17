@@ -31,6 +31,7 @@ import com.ali_sajjadi.test.R
 import com.ali_sajjadi.test.ui.theme.LocalCustomColors
 import com.ali_sajjadi.test.ui.theme.body3
 import com.ali_sajjadi.test.ui.theme.body4
+import com.ali_sajjadi.test.ui.theme.h5
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -51,7 +52,7 @@ fun RecentSearches(modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = "Recent searches",
-                style = MaterialTheme.typography.body3.copy(color = LocalCustomColors.current.colorBrand)
+                style = MaterialTheme.typography.h5.copy(color = LocalCustomColors.current.colorBrand)
             )
             HorizontalDivider(
                 color = LocalCustomColors.current.primaryLine
@@ -104,7 +105,7 @@ fun RecentSearchItem(
 
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(15.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(

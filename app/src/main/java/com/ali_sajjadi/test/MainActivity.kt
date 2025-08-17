@@ -18,6 +18,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import com.ali_sajjadi.test.searchHisrtory.SearchHistoryScreen
+import com.ali_sajjadi.test.topWallet.AddWalletDialog
 import com.ali_sajjadi.test.topWallet.TopWalletScreen
 import com.ali_sajjadi.test.ui.theme.LocalCustomColors
 import com.ali_sajjadi.test.ui.theme.TestTheme
@@ -47,11 +49,17 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.align(Alignment.Center)
                     )*/
 
-                   /* WalletInfoScreen(
+                    /*WalletInfoScreen(
+                        modifier = Modifier.align(Alignment.TopCenter)
+                    )*/
+                    /*SearchHistoryScreen(
                         modifier = Modifier.align(Alignment.TopCenter)
                     )*/
 
-                    TopWalletScreen()
+                    //AddWalletDialog()
+                    SearchHistoryScreen()
+
+                    //TopWalletScreen()
                     //HomeScreen()
                 }
             }

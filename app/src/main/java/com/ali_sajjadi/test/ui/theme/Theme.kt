@@ -89,7 +89,8 @@ data class CustomColors(
     val snackBar: Color,
     val cursor: Color,
     val primaryLine: Color,
-    val secondaryLine: Color
+    val secondaryLine: Color,
+    val alertDialog: Color
 )
 
 val LightCustomColors = CustomColors(
@@ -113,7 +114,8 @@ val LightCustomColors = CustomColors(
     snackBar = SnackBarLight,
     cursor = CursorLight,
     primaryLine = PrimaryLineLight,
-    secondaryLine = SecondaryLineLight
+    secondaryLine = SecondaryLineLight,
+    alertDialog = AlertDialogLight
 )
 
 val DarkCustomColors = CustomColors(
@@ -137,5 +139,6 @@ val DarkCustomColors = CustomColors(
     snackBar = SnackBarDark,
     cursor = CursorDark,
     primaryLine = PrimaryLineDark,
-    secondaryLine = SecondaryLineDark
+    secondaryLine = SecondaryLineDark,
+    alertDialog = AlertDialogDark
 )
