@@ -58,13 +58,13 @@ fun NewPasswordScreen(modifier: Modifier = Modifier) {
         ParticleScreen()
 //        GalaxyBackgroundFullScreen()
 
-        Column(modifier = modifier.fillMaxSize()
+        Column(modifier = Modifier.fillMaxSize()
             .padding( 16.dp)
             .background(color = Color.Transparent),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally) {
 
-            Surface(modifier = modifier.size(30.dp, 30.dp)
+            Surface(modifier = Modifier.size(30.dp, 30.dp)
                 .clickable(true,
                     onClick = {})
                 .align(Alignment.Start),
@@ -83,11 +83,11 @@ fun NewPasswordScreen(modifier: Modifier = Modifier) {
                 }
             }
 
-            Text(modifier = modifier.padding(top = 16.dp),
+            Text(modifier = Modifier.padding(top = 16.dp),
                 text = "New Password", color = LocalCustomColors.current.primaryText,
                 style = MaterialTheme.typography.h1.copy(fontSize = 32.sp, fontWeight = FontWeight.Bold))
 
-            Text(modifier = modifier.padding(top = 144.dp),
+            Text(modifier = Modifier.padding(top = 144.dp),
                 text = "Please write your new password", color = LocalCustomColors.current.primaryText,
                 style = MaterialTheme.typography.h9.copy(fontSize = 12.sp, fontWeight = FontWeight.Medium))
 

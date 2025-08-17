@@ -68,13 +68,13 @@ fun LoginScreen(modifier: Modifier = Modifier) {
         ParticleScreen()
 //        GalaxyBackgroundFullScreen()
 
-        Column(modifier = modifier.fillMaxSize()
+        Column(modifier = Modifier.fillMaxSize()
             .padding( 16.dp)
             .background(color = Color.Transparent),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally) {
 
-            Surface(modifier = modifier.size(30.dp, 30.dp)
+            Surface(modifier = Modifier.size(30.dp, 30.dp)
                 .clickable(true,
                     onClick = {})
                 .align(Alignment.Start),
@@ -93,11 +93,11 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                 }
             }
 
-            Text(modifier = modifier.padding(top = 16.dp),
+            Text(modifier = Modifier.padding(top = 16.dp),
                 text = "Welcome back", color = LocalCustomColors.current.primaryText,
                 style = MaterialTheme.typography.h1.copy(fontSize = 32.sp, fontWeight = FontWeight.Bold))
 
-            Text(modifier = modifier.padding(top = 22.dp),
+            Text(modifier = Modifier.padding(top = 22.dp),
                 text = "Login to your account", color = LocalCustomColors.current.primaryText,
                 style = MaterialTheme.typography.h9.copy(fontSize = 12.sp, fontWeight = FontWeight.Medium))
 
@@ -126,7 +126,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                     onValueChange = { password = it }
                 )
 
-                Text(modifier = modifier.align(Alignment.End).clickable(true){ },
+                Text(modifier = Modifier.align(Alignment.End).clickable(true){ },
                     text = "Forgot  Password?", color = LocalCustomColors.current.primaryText,
                     style = MaterialTheme.typography.h9.copy(fontSize = 12.sp,
                         fontWeight = FontWeight.Medium, textDecoration = TextDecoration.Underline))
@@ -146,30 +146,30 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
                 }
 
-                Row(modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center,
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center,
                     verticalAlignment = Alignment.CenterVertically) {
 
-                    HorizontalDivider(modifier = modifier.padding(start = 18.dp)
+                    HorizontalDivider(modifier = Modifier.padding(start = 18.dp)
                         .width(120.dp), color = LocalCustomColors.current.primaryLine, thickness = 1.dp)
 
-                    Text(modifier = modifier.padding(horizontal = 4.dp),
+                    Text(modifier = Modifier.padding(horizontal = 4.dp),
                         text = "or", color = LocalCustomColors.current.primaryLine,
                         style = MaterialTheme.typography.h8.copy(fontSize = 14.sp,
                             fontWeight = FontWeight.Medium))
 
-                    HorizontalDivider(modifier = modifier.padding(end = 18.dp)
+                    HorizontalDivider(modifier = Modifier.padding(end = 18.dp)
                         .width(120.dp), color = LocalCustomColors.current.primaryLine, thickness = 1.dp)
                 }
 
-                CustomButton(modifier = modifier.fillMaxWidth().height(40.dp),
+                CustomButton(modifier = Modifier.fillMaxWidth().height(40.dp),
                     secondaryButton = true, strokeColor = LocalCustomColors.current.outlinedButtonBrand,
                     radius = 16.dp, onClick = {} ) {
 
-                    Row(modifier = modifier.fillMaxSize(),
+                    Row(modifier = Modifier.fillMaxSize(),
                         horizontalArrangement = Arrangement.Center,
                         verticalAlignment = Alignment.CenterVertically) {
 
-                        Image(modifier = modifier.padding(end = 8.dp),
+                        Image(modifier = Modifier.padding(end = 8.dp),
                             painter = painterResource(R.drawable.ic_google),
                             contentDescription = null)
 
@@ -181,7 +181,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
                 }
 
-                Row(modifier = modifier.padding(top = 30.dp),
+                Row(modifier = Modifier.padding(top = 30.dp),
                     horizontalArrangement = Arrangement.Center,
                     verticalAlignment = Alignment.CenterVertically) {
 
@@ -189,7 +189,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                         style = MaterialTheme.typography.h9.copy(fontSize = 12.sp,
                             fontWeight = FontWeight.Medium))
 
-                    Text(modifier = modifier.clickable(true){ },
+                    Text(modifier = Modifier.clickable(true){ },
                         text = "Register", color = LocalCustomColors.current.primaryText,
                         style = MaterialTheme.typography.h9.copy(fontSize = 12.sp,
                             fontWeight = FontWeight.Medium),textDecoration = TextDecoration.Underline)

@@ -85,3 +85,5 @@ val PrimaryLineDark = Color(0xFF9DA0AF)
 val SecondaryLineLight = Color(0xFF9DA0AF)
 val SecondaryLineDark = Color(0xFF2A2D3B)
 
+val blueAddress = Color(0xFF6BA2F3)
+
